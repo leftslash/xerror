@@ -32,7 +32,7 @@ func Errorf(i error, c int, format string, a ...interface{}) *Err {
 }
 
 func (e *Err) Error() string {
-	return fmt.Sprintf("%s (%x)", e.External, e.Code)
+	return fmt.Sprintf("%s (0x%x)", e.External, e.Code)
 }
 
 func (e *Err) Log() {
